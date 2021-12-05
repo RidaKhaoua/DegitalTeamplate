@@ -1,0 +1,408 @@
+/* Start Global rules*/
+:root {
+  --main-color: #e66372;
+  --section-padding: 100px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Small Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Mediume Screen  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Larger Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global rules */
+/* start login */
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.login .container .content {
+  box-shadow: 0 0 10px #ddd;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+@media (max-width: 771px) {
+  .login .container .content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.login .container .sing-in {
+  padding: 50px;
+}
+
+.login .container .sing-in .body-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.login .container .sing-in .body-content .title {
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+.login .container .sing-in .body-content .social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.login .container .sing-in .body-content .social-media a {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.login .container .sing-in .body-content .social-media i {
+  color: #9a989b;
+  font-size: 20px;
+}
+
+.login .container .sing-in form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login .container .sing-in form label {
+  display: block;
+  margin: 20px 0px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login .container .sing-in form input:not([type="submit"]) {
+  border: none;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #f3f0f3;
+  outline: none;
+}
+.login .container .sing-in form input:not([type="submit"])::placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.login .container .sing-in form input[type="submit"] {
+  display: block;
+  margin: 20px 0px;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.login .container .sing-in .forgot-password-remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 771px) {
+  .login .container .sing-in .forgot-password-remember-me {
+    flex-direction: column;
+  }
+}
+
+.login .container .sing-in .forgot-password-remember-me .remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.login .container .sing-in .forgot-password-remember-me .remember-me label {
+  text-transform: capitalize;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.login .container .sing-in .forgot-password-remember-me input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid;
+  position: relative;
+}
+
+.login
+  .container
+  .sing-in
+  .forgot-password-remember-me
+  input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: white;
+  width: 0.65em;
+  height: 0.65em;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.login
+  .container
+  .sing-in
+  .forgot-password-remember-me
+  input[type="checkbox"]:checked::before {
+  opacity: 1;
+  background-color: white;
+}
+.login
+  .container
+  .sing-in
+  .forgot-password-remember-me
+  input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+  border-color: #ccc;
+}
+
+.login
+  .container
+  .sing-in
+  .forgot-password-remember-me
+  input[type="checkbox"]:checked
+  + label {
+  color: var(--main-color);
+}
+
+.login .container .sing-in .forgot-password {
+  text-transform: capitalize;
+  color: #9a989b;
+  font-size: 18px;
+}
+
+.login .container .you-dont-have-account {
+  display: none;
+  margin: 10px 0 0;
+}
+
+@media (max-width: 991px) {
+  .login .container .you-dont-have-account {
+    display: block;
+  }
+}
+
+.login .container .you-dont-have-account p {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.login .container .you-dont-have-account p a {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.login .container .content .welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .login .container .content .welcome {
+    display: none;
+  }
+}
+
+.login .container .content .welcome h1 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.login .container .content .welcome p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.login .container .content .welcome a {
+  color: white;
+  display: block;
+  padding: 18px 20px;
+  border: 1px solid white;
+  background-color: inherit;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+/* start register */
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+}
+
+.register .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  background-color: white;
+}
+
+@media (max-width: 771px) {
+  .register .container {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 0px;
+  }
+}
+
+.register .container .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .register .container .image {
+    display: none;
+  }
+}
+
+.register .container .image img {
+  max-width: 100%;
+}
+
+.register .container .sing-up {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register .container .sing-up .body-content h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.register .container .sing-up .body-content p {
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  margin: 20px 0px;
+  line-height: 1.6;
+}
+
+.register .container .sing-up form {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.register .container .sing-up form > div {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  width: 70%;
+  margin: 0 auto 20px;
+}
+
+.register .container .sing-up form > div input:not([type="submit"]) {
+  width: 75%;
+  padding: 20px 0px;
+  outline: none;
+  border: none;
+}
+.register
+  .container
+  .sing-up
+  form
+  > div
+  input:not([type="submit"])::placeholder {
+  text-transform: capitalize;
+}
+
+.register .container .sing-up form input[type="submit"] {
+  margin: 20px auto;
+  display: block;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 50px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register .container .sing-up form > div i {
+  margin-right: 20px;
+  color: #ccc;
+}
+
+.register .container .sing-up .have-account {
+  text-transform: capitalize;
+}
+
+.register .container .sing-up .have-account span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.register .container .sing-up .have-account a {
+  color: var(--main-color);
+  font-weight: bold;
+}
