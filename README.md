@@ -1,1 +1,1 @@
-# DegitalTeamplate
+# DegitalTemplate
