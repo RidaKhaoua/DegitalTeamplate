@@ -743,6 +743,12 @@ header .container nav .bar {
   z-index: -1;
 }
 
+@media (max-width: 991px) {
+  .faq .container h1::before {
+    display: none;
+  }
+}
+
 .faq .container .form-search {
   display: flex;
   justify-content: center;
