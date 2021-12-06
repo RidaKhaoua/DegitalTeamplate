@@ -557,6 +557,7 @@ header .container nav .bar {
   position: relative;
   background-color: #eae6ff;
   z-index: 1;
+  overflow: hidden;
 }
 
 .contact .container {
