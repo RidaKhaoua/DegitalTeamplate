@@ -302,6 +302,11 @@ header .container nav .bar {
   left: 0px;
 }
 
+@media (max-width: 771px) {
+  .about .dots {
+    display: none;
+  }
+}
 .about .dots.right {
   right: 0;
   bottom: 100;
