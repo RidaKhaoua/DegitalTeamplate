@@ -67,6 +67,12 @@ a {
   cursor: pointer;
   opacity: 0;
   transition: var(--main-transition);
+  display: none;
+}
+@media (min-width: 991px) {
+  .scroll-top {
+    display: block;
+  }
 }
 /* End scroll to top */
 
@@ -843,13 +849,17 @@ footer .container .text {
 }
 
 footer .container form {
-  width: 500px;
+  width: 300px;
   max-width: 100%;
-  margin: auto;
+  margin: 0 auto 30px;
   display: flex;
-  margin-bottom: 30px;
 }
 
+@media (max-width: 771px) {
+  footer .container form {
+    flex-direction: column;
+  }
+}
 footer .container form input {
   flex: 1;
   padding: 12px 15px;
@@ -861,6 +871,14 @@ footer .container form input {
   background-color: transparent;
   outline: none;
   caret-color: white;
+}
+
+@media (max-width: 771px) {
+  footer .container form input {
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
 }
 
 footer .container form input::placeholder {
@@ -879,11 +897,25 @@ footer .container form button {
   cursor: pointer;
 }
 
+@media (max-width: 771px) {
+  footer .container form button {
+    padding: 10px 0;
+    border-radius: 6px;
+  }
+}
+
 footer .container .links {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   margin-bottom: 30px;
+}
+
+@media (max-width: 771px) {
+  footer .container .links {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 footer .container .links li a {
@@ -892,6 +924,11 @@ footer .container .links li a {
   font-weight: 100;
   padding: 10px;
   transition: var(--main-transition) linear;
+}
+@media (max-width: 771px) {
+  footer .container .links li a {
+    padding: 3px;
+  }
 }
 
 footer .container .links li a:hover {
